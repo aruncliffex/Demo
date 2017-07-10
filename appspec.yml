@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /opt/Test/api_version
+  - source: /version.md
+    destination: /opt/Test
+hooks:
+  BeforeInstall:
+    - location: scripts/clear_webroot.sh
+      runas: root
+  AfterInstall: 
+    - location: scripts/special_permissions.sh
+      runas: root
+    - location: scripts/virtual_host_setup.sh
+      runas: root
