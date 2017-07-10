@@ -1,3 +1,5 @@
+Amend commit
+
 Check rsa key
 
 Hello Master
